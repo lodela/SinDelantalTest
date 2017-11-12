@@ -8,7 +8,8 @@ var DB = {
       1:2,
       2:1,
       3:1
-    }
+    },
+    total:''
   },
   catalogo:{
     1:{
@@ -32,7 +33,7 @@ var DB = {
   }
 }
 
-$('header nav.myShoppingCart .items').html(DB.items);
+$('header nav.myShoppingCart .items, .shopping-cart-header .badge').html(DB.items);
 
 $('nav, a').click(function() {
   const clicked = $(this).attr('rel');
@@ -50,14 +51,21 @@ $('nav, a').click(function() {
 
 if(0!=DB.items){
   const items = DB.cart.items;
+  var total = 0;
   for(var i in items){
-    var Item = DB.catalogo[i];
-    console.log(items[i]);
-    var img   = Item.img;
-    var Iname = Item.name;
-    var Iprice= Item.precio;
-    var Iqtt  = items[i];
-    var li = '<li class="clearfix"><figure><img src="images/catalogo/'+img+'" alt="item'+i+'"></figure><span class="item-name">'+Iname+'</span><span class="item-price">$'+Iprice+'</span><span class="item-quantity">Quantity: '+Iqtt+'</span></li>'
+    var item,img,Iname,Iprice,Iqtt,sbTtl,li;
+    Item   = DB.catalogo[i];
+    img    = Item.img;
+    Iname  = Item.name;
+    Idesc  = Item.desc;
+    Iprice = Item.precio;
+    Iqtt   = items[i];
+    sbTtl  = Iprice*Iqtt;
+    total = total+sbTtl;
+    li     = '<li class="clearfix"><figure><img src="images/catalogo/'+img+'" alt="item'+i+'"></figure><span class="item-name">'+Iname+'</span><span class="item-desc">'+Idesc+'</span><span class="item-price">$'+Iprice+'</span><span class="item-quantity">Quantity: '+Iqtt+'</span></li>'
     $('.shopping-cart-items').append(li);
   }
+  $('.shopping-cart-total').html(total);
+  DB.cart.total = total;
 }
+console.log(DB);

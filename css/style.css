@@ -102,7 +102,7 @@ header .shopping-cart .shopping-cart-header .cart-icon{
 header .shopping-cart .shopping-cart-header .badge{
   width: 20px; height: 20px;
   display: block; position: relative; float: left;
-  text-align: center; line-height: 19px;
+  font-size: 12px; text-align: center; line-height: 19px;
   border-radius: 50%;
   border: solid 1px white;
 }
@@ -128,7 +128,12 @@ header .shopping-cart .shopping-cart-header .badge{
 .shopping-cart .shopping-cart-items .item-name {
     display: block;
     font-size: 12px;
-    line-height: 16px;
+    line-height: 14px;
+}
+.shopping-cart .shopping-cart-items .item-desc{
+  display: block;
+  font-size: 12px;
+  line-height: 14px;
 }
 .shopping-cart .shopping-cart-items .item-price {
     color: white;
@@ -138,5 +143,7 @@ header .shopping-cart .shopping-cart-header .badge{
     color: blue;
     position: relative; float:right;
     font-size: 12px;
-
+}
+.shopping-cart-total::before{
+  content: 'Total: $'
 }
