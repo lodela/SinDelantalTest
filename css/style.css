@@ -150,8 +150,9 @@ header .shopping-cart .shopping-cart-header .badge{
 }
 
 .credit-card-box{
-  width: 320px; height: 391px;
+  width: 320px;
   margin-bottom: 20px;
+  padding: 0 0 20px 0;
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 4px;

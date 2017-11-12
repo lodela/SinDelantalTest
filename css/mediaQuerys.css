@@ -59,6 +59,14 @@
       margin: 0 8px 0 0;
       width: 262px;
     }
+    .credit-card-box{
+      width: 99.5%;
+      top: 278px;
+      margin-bottom:0px;
+    }
+    .credit-card-box header{
+      height: 60px;
+    }
 
 }
 
@@ -77,6 +85,10 @@
     header .shopping-cart{
       margin: 4px 20px 0 0;
     }
+
+    .credit-card-box{
+      top: 280px;
+    }
 }
 
 /* ----------- Google Nexus 6P, Galaxy S5,  ----------- */
@@ -90,7 +102,11 @@ and (-webkit-min-device-pixel-ratio: 3.0) {
   }
   header .shopping-cart {
     margin: 8px 17px 0 0;
-width: 288px;
+    width: 288px;
+  }
+  .credit-card-box{
+    width: 320px;
+    top: 280px;
   }
 }
 @media only screen
@@ -102,5 +118,8 @@ and (-webkit-min-device-pixel-ratio: 3.0) {
   }
   header .shopping-cart{
     margin: 4px 25px 0 0;
+  }
+  .credit-card-box{
+    top: 280px;
   }
 }
