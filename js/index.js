@@ -36,7 +36,7 @@ var DB = {
 var cntItems = Object.keys(DB.cart.items).length;
 $('header nav.myShoppingCart .items, .shopping-cart-header .badge').html(cntItems);
 
-$('nav, a, .other').click(function() {
+$('nav, a, .other, .button').click(function() {
   const clicked = $(this).attr('rel');
   console.log(clicked);
   if(clicked == 'shoppinCart'){
@@ -51,6 +51,12 @@ $('nav, a, .other').click(function() {
     $('.credit-card-box header figure').hide();
     $('.credit-card-box h3').html('').html('Más opciones de pago:');
     $('.credit-card-box section').html('').html('<figure><img src="images/pago_oxxo.jpg" alt=""></figure>');
+    $('.credit-card-box footer .button').attr('rel', 'oxxo')
+  }else if(clicked == 'oxxo'){
+    $('section.main').fadeOut();
+    $('section.pagoOxxo').fadeIn();
+  }else if(clicked=='back'){
+    location.reload();
   }
 });
 

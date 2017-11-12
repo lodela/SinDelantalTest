@@ -165,7 +165,7 @@ header .shopping-cart .shopping-cart-header .badge{
   margin-top: -200px;
 
   font-family: 'Oswald', sans-serif;
-  /*display: none;*/
+  display: none;
 }
 
 .credit-card-box header{
@@ -225,4 +225,30 @@ header .shopping-cart .shopping-cart-header .badge{
 }
 .credit-card-box footer .other:hover{
   color: steelblue;
+}
+
+.pagoOxxo{
+  font: 14px/22px "Lato", Arial, sans-serif;
+  padding:20px 0;
+  background: white;
+  position: absolute;
+  display: none;
+}
+.pagoOxxo h2{
+  font-size: 16px;
+  line-height: 24px;
+  text-align: justify;
+}
+.pagoOxxo p{
+  text-align: justify;
+  padding: 0 0 10px 0;
+}
+.pagoOxxo figure{
+  margin: 10px 0;
+}
+.pagoOxxo figure img{
+  position: relative;
+  left: 50%;
+  margin-left: -300px;
+  /*margin-top: -200px;*/
 }

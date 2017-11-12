@@ -78,6 +78,9 @@ table {
 	-webkit-box-shadow: 0 0 10px 0 rgba(255,255,255,1);
 	box-shadow: 0 0 10px 0 rgba(255,255,255,1);
 }
+.back{
+	background: darkgrey;
+}
 .pull-left{
 	position: relative;
 	float: left;
@@ -85,4 +88,13 @@ table {
 .pull-right{
 	position: relative;
 	float: right;
+}
+.botones{
+	overflow: hidden;
+}
+.botones .button{
+	width: 300px;
+	max-width: 250px;
+	position: relative; float: left;
+	margin: 10px 20px;
 }

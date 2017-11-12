@@ -67,6 +67,14 @@
     .credit-card-box header{
       height: 60px;
     }
+    .pagoOxxo{
+      padding:20px 20px;
+      width: 87%
+    }
+    .botones .button{
+      max-width: 90%;
+      margin:10px 0;
+    }
 
 }
 
