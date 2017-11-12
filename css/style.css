@@ -71,6 +71,7 @@ header .shopping-cart {
   border-radius: 5px;
   padding: 20px;
   font: 14px/22px "Lato", Arial, sans-serif;
+  z-index: 1;
   display: none;
 }
 header .shopping-cart:after {
@@ -146,4 +147,68 @@ header .shopping-cart .shopping-cart-header .badge{
 }
 .shopping-cart-total::before{
   content: 'Total: $'
+}
+
+.credit-card-box{
+  width: 320px; height: 391px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+  box-shadow: 0 1px 1px rgba(0,0,0,.05);
+
+  position: absolute;
+  top: 50%; left: 50%;
+  margin-left: -160px;
+  margin-top: -200px;
+
+  font-family: 'Oswald', sans-serif;
+  display: none;
+}
+
+.credit-card-box header{
+    color: #333;
+    background-color: #f5f5f5;
+    border-color: #ddd;
+}
+.credit-card-box header h3{
+  width: 90px;
+  position: relative; float: left;
+  line-height: 59px;
+  text-align: center;
+  font-size: 20px;
+  padding: 0 0 0 10px;
+}
+.credit-card-box header figure{
+  position:relative; float:right;
+  top:8px; right: 8px;
+}
+.credit-card-box section{
+  padding: 20px 20px 0 20px;
+  overflow: hidden;
+}
+.credit-card-box footer{
+  padding:0 20px;
+}
+.credit-card-box footer .button{
+  height: 25px;
+  line-height: 26px;
+  cursor: pointer;
+}
+.credit-card-box section form label{
+  width: 100%;
+  display: block;
+  margin: 0 0 10px 0;
+}
+.credit-card-box section form input{
+  width: 95%; height:35px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  border: solid 1px darkgrey;
+  margin: 0 0 10px 0;
+  padding-left: 5%;
+}
+.credit-card-box section form input[type="number"]{
+
 }

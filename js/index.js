@@ -1,8 +1,9 @@
 var DB = {
-  items:'3',
-  user:': Empresa X Y Z',
-  adds:'Dirección del usuario: Calle Río Lerma 4, Piso 6, Colonia Cuauhtémoc, CP 53000, Ciudad de México',
-  phne:'0445533678909',
+  user:{
+    name:'Empresa X Y Z',
+    addrss:'Dirección del usuario: Calle Río Lerma 4, Piso 6, Colonia Cuauhtémoc, CP 53000, Ciudad de México',
+    phne  :'0445533678909',
+  },
   cart:{
     items:{
       1:2,
@@ -32,8 +33,8 @@ var DB = {
     }
   }
 }
-
-$('header nav.myShoppingCart .items, .shopping-cart-header .badge').html(DB.items);
+var cntItems = Object.keys(DB.cart.items).length;
+$('header nav.myShoppingCart .items, .shopping-cart-header .badge').html(cntItems);
 
 $('nav, a').click(function() {
   const clicked = $(this).attr('rel');
@@ -44,7 +45,7 @@ $('nav, a').click(function() {
     });
   }else if(clicked == 'checkout'){
     $('.shopping-cart').slideUp('fast', function() {
-      // Animation complete.
+      $('.credit-card-box').fadeIn();
     });
   }
 });
@@ -61,11 +62,10 @@ if(0!=DB.items){
     Iprice = Item.precio;
     Iqtt   = items[i];
     sbTtl  = Iprice*Iqtt;
-    total = total+sbTtl;
+    total  = total+sbTtl;
     li     = '<li class="clearfix"><figure><img src="images/catalogo/'+img+'" alt="item'+i+'"></figure><span class="item-name">'+Iname+'</span><span class="item-desc">'+Idesc+'</span><span class="item-price">$'+Iprice+'</span><span class="item-quantity">Quantity: '+Iqtt+'</span></li>'
     $('.shopping-cart-items').append(li);
   }
   $('.shopping-cart-total').html(total);
   DB.cart.total = total;
 }
-console.log(DB);

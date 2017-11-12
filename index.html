@@ -46,7 +46,35 @@
       <a href="#" class="button" rel="checkout">Checkout</a>
     </div>
   </header>
-  <section class="main"></section>
+  <section class="main">
+    <div class="credit-card-box">
+      <header>
+        <h3>CheckOut</h3>
+        <figure class="accepted">
+          <img src="images/accepted_c22e0.png" alt="Aceptamos todas las tarjetas de crédito">
+        </figure>
+      </header>
+      <section>
+        <form>
+          <label for="cn">NAME ON CARD:</label>
+          <input id="cn" type="text" name="creditCardName" placeholder="NAME ON CARD" required="">
+          <label for="cc">CARD NUMBER:</label>
+          <input id="cc" type="number" name="creditCard" required="">
+          <div class="pull-left col-7">
+            <label for="ced">EXPIRATION DATE:</label>
+            <input id="ced" type="tel" class="form-control" name="cardExpiry" placeholder="MM / YY" autocomplete="cc-exp" required="">
+          </div>
+          <div class="pull-right col-4">
+            <label for="ccv">CCV CODE:</label>
+            <input id="ccv" type="number" class="form-control" name="cardCVC" placeholder="CVC" autocomplete="cc-csc" required="">
+          </div>
+        </form>
+      </section>
+      <footer>
+        <div class="button">Pagar y salir</div>
+      </footer>
+    </div>
+  </section>
   <footer></footer>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
