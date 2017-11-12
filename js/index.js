@@ -36,9 +36,9 @@ var DB = {
 var cntItems = Object.keys(DB.cart.items).length;
 $('header nav.myShoppingCart .items, .shopping-cart-header .badge').html(cntItems);
 
-$('nav, a').click(function() {
+$('nav, a, .other').click(function() {
   const clicked = $(this).attr('rel');
-  // console.log(clicked);
+  console.log(clicked);
   if(clicked == 'shoppinCart'){
     $('.shopping-cart').slideToggle('fast', function() {
       // Animation complete.
@@ -47,6 +47,10 @@ $('nav, a').click(function() {
     $('.shopping-cart').slideUp('fast', function() {
       $('.credit-card-box').fadeIn();
     });
+  }else if(clicked == 'other'){
+    $('.credit-card-box header figure').hide();
+    $('.credit-card-box h3').html('').html('Más opciones de pago:');
+    $('.credit-card-box section').html('').html('<figure><img src="images/pago_oxxo.jpg" alt=""></figure>');
   }
 });
 
