@@ -1,0 +1,106 @@
+/* ----------- For desktop: ----------- */
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+        width: 100%;
+    }
+}
+
+
+/* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
+
+/* Portrait and Landscape */
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+  header{
+    height: 80px;
+  }
+}
+
+/* Portrait */
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+    header{
+      height: 70px;
+      border: solid 1px darkgrey;
+      border-width: 0 0 1px 0;
+    }
+    header h1 {
+      width: 100%;
+      padding: 6px 0 0 0px;
+      font-size: 40px;
+      line-height: 59px;
+    }
+    header nav.menu{
+      float: left;
+    }
+    header nav.myShoppingCart .items{
+      top: 10px;
+    }
+    header .shopping-cart {
+      margin: 0 8px 0 0;
+      width: 262px;
+    }
+
+}
+
+/* Landscape */
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+    header {
+      height: 60px;
+    }
+    header h1{
+      width: 50%;
+    }
+    header .shopping-cart{
+      margin: 4px 20px 0 0;
+    }
+}
+
+/* ----------- Google Nexus 6P, Galaxy S5,  ----------- */
+
+@media only screen
+and (min-width: 360px)
+and (orientation: portrait)
+and (-webkit-min-device-pixel-ratio: 3.0) {
+  header nav.myShoppingCart{
+    margin:6px 10px 0 0;
+  }
+  header .shopping-cart {
+    margin: 8px 17px 0 0;
+width: 288px;
+  }
+}
+@media only screen
+and (min-width: 360px)
+and (orientation: landscape)
+and (-webkit-min-device-pixel-ratio: 3.0) {
+  header h1{
+    width: 50%;
+  }
+  header .shopping-cart{
+    margin: 4px 25px 0 0;
+  }
+}
